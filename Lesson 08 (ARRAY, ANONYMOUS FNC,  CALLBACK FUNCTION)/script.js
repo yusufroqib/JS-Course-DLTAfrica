@@ -199,7 +199,7 @@ console.log(male);
 const numb = [1, 2, 4, 9, 1, 4, 2, 9, 8, 7, 12, 20, 11, 1, 2];
 console.log(numb);
 
-const index1 = numb.indexOf(2,8)
+const index1 = numb.indexOf(2)
 console.log(index1);
 
 
@@ -260,6 +260,7 @@ const fnc = (value, i, arr) => {  //The 'i' and 'arr' are optional. Any of the t
   // console.log(i);
   // console.log(arr);
 }; 
+
 names.forEach(fnc);
 
 // EXAMPLE
@@ -300,6 +301,7 @@ const inventory = [
 const prices = inventory.map((value) => {
   return value.price
 });
+
 console.log(prices);    //[4200, 5200, 1000, 500, 1200]
 
 const commodities = inventory.map((value) => value.name);
@@ -318,7 +320,8 @@ console.log(solvedArr);
 //Shows the output in arrays
 //Filter the positive from negative
 const numbers = [-20, -45, 43, 30, -1, 23, 34, -50, 44, -75];
-const negative = numbers.filter((number) => number < 0);
+const negative = numbers.filter((number) => number < 0)
+
 console.log(negative);  // [-20, -45, -1, -50, -75]
 
 const positive = numbers.filter((number) => number > 0);
@@ -347,11 +350,13 @@ const employeesData = [
   {name: "Mutula", age: 2023-1981, yearsSpent: 10},
 ];
 
-const toRetire = employeesData.filter((employee) => {
-  if (employee.age >= 60 || employee.yearsSpent >= 35) {
-    return (employee);
-  }
-})
+// const toRetire = employeesData.filter((employee) => {
+//   if (employee.age >= 60 || employee.yearsSpent >= 35) {
+//     return (employee);
+//   }
+// })
+
+const toRetire = employeesData.filter((employee) => employee.age >= 60 || employee.yearsSpent >= 35) 
 console.log(toRetire); //All emploeesData to retire     //[{name: "Adekola", age: 63, yearsSpent: 23}, {name: "Dangote", age: 60, yearsSpent: 15}, {name: "Akosi", age: 43, "yearsSpent": 35}]
 
 const employeesToRetired = toRetire.map (employee => employee.name)  //To save the names in an array
@@ -402,7 +407,7 @@ console.log(array.some((el) => el > 3));    //true
 
 // *********** every()
 //It checks if all the elements passes the test provided in the function
-console.log(array.every(el => el > 5)); //false
+console.log(array.every(el => el > 2)); //false
 
 
 

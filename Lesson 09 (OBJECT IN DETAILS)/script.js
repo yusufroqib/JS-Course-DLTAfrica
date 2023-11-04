@@ -181,13 +181,15 @@ const user = {
     userName: 'John',
     password: 123123
 }
-user.firstName = 'Supreme'
+
+// delete user.userName
+// user.firstName = 'Supreme'
 // user.userName = 'Ade'
-// console.log(user);
+console.log(user);
 
 
 const userInfo = Object.freeze(user);
-userInfo.userName = 'Ade'
+// userInfo.userName = 'Ade'
 console.log(userInfo);
 
 userInfo.firstName = 'Supreme'  //Try to change the Username but it won't change

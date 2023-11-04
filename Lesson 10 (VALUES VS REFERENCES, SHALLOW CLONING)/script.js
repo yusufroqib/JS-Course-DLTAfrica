@@ -1,10 +1,20 @@
-console.log('Testing');
+const yy = 5
+const zz = 5
+console.log(yy == zz);
+
+
+const pp = [1, 3, 5] //0x08e23
+const qq = [1, 3, 5]    //0x08e24
+
+console.log(pp === qq);
 
 // ************************** VALUES VS REFERENCE *********************************
 //COPYING NUMBERS
 let x = 1;
-let y = 1
-// y += 2;
+let y = 2
+x = y
+y += 2;
+console.log(x);
 console.log(x === y);
 console.log(y);
 
@@ -19,7 +29,8 @@ console.log(secondPerson);
 //COPYING COMPLEX VALUES (ARRAY)
 const animal = ['Goat', 'Cat', 'Ram'];
 const newAnimal = animal;
-animal.push('Cow')
+console.log(newAnimal);
+animal.push('Cow', 'Alangba')
 newAnimal.push('Zebra')
 console.log(animal);
 console.log(newAnimal);
@@ -39,7 +50,7 @@ const person = {
 const otherPerson = person;
 console.log(person === otherPerson);
 
-person.firstName = 'Seyi'
+// person.firstName = 'Seyi'
 otherPerson.age = 32
 console.log(person);
 console.log(otherPerson);
@@ -123,8 +134,13 @@ const number2 = [1, 2, 3, 4, 5];    //Memory ID: 123ed
 // const copiedNumber = number2;       //Memory ID: 123ed
 // console.log(number2 === copiedNumber)
 
-const copiedNumber = [...number2]
-console.log(number2 === copiedNumber)
+const copiedNumber = [...number2]   //Memory ID: 125ed
+console.log(copiedNumber);
+number2.push(88)
+
+console.log(copiedNumber);
+console.log(number2);
+// console.log(number2 === copiedNumber)
 
 // const newNumber2 = [...number2];    //Shallow Clone
 
@@ -149,12 +165,21 @@ console.log(spreadNum)  //Cloned copy
 // console.log(copiedNumber5);
 // console.log(newNumber6);
 
+const ola = [1, 3, [4, 6], {a: 1, b: 3}, 9]
+const muha = [...ola]
+muha[2][0]= 99
+muha[1] = 50
+
+console.log(muha);
+console.log(ola);
+
 
 //********* EXAMPLE  (FOR OBJECT {})
 const person5 = {
     name: 'John',
     age: 20
 }
+
 const otherPerson5 = {...person5}
 
 otherPerson5.name = 'Seyi'
@@ -229,7 +254,7 @@ console.log(newDetails);
 const myPeople = {
     fullName: 'Adelo Adebo',
     car: {
-        brand: 'Volve',
+        brand: 'Volvo',
         door: 2, 
         color: 'yellow'
     }
@@ -241,6 +266,7 @@ console.log(stringified);
 const newPeople = JSON.parse(stringified);      //SECOND STEP (CLONED SUCCESSFULLY)
 console.log(newPeople);
 
+// console.log(JSON.parse(JSON.stringify(myPeople)));
 
 // EXAMPLE
 const myObj = {
