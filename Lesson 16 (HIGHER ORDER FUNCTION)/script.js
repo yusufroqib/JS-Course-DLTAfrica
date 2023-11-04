@@ -50,6 +50,7 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 //*************filter method
 //get 21 and older
 
+
 const whoCanDrink = ages.filter(age => age >= 21)
 
 console.log(whoCanDrink);
@@ -131,6 +132,7 @@ const sortedCompanies = companies.sort(function(c1, c2){
 console.log(sortedCompanies);
 
 // ***************************
+//const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 const companiesSorted = companies.sort((c1, c2) => c1.start > c2.start ? 1 : -1)
 console.log(companiesSorted);
 
@@ -220,14 +222,21 @@ const persons = {
 }
 
 //Destructuring
-const {firstName, lastName, car:{color,wheel}, animal: {cat, dog}} = persons
-console.log(persons);
+// const {firstName, lastName, car:{color,wheel}, animal: {cat, dog}} = persons
+// console.log(color);
+const {firstName:namez='Muhammed', lastName, animal:{cat}} = persons
+console.log(namez);
 
 //ARRAY Destructuring
-const introduction = ['Hello', 'i', 'am', 'Sarah']
+const introduction = ['Hello', 'i', 'am', 'Sarah', 'Checked']
 
-const [greeting,,, name] = introduction
-console.log(greeting, name);
+const[greet,, verb, name, testing='Lets go'] = introduction
+console.log(greet);
+// console.log(rest);
+console.log(testing);
+
+// const [greeting,,, name] = introduction
+// console.log(greeting, name);
 
 
 const nums = [1, 4, 5, 2, 9]
