@@ -224,8 +224,10 @@ const persons = {
 //Destructuring
 // const {firstName, lastName, car:{color,wheel}, animal: {cat, dog}} = persons
 // console.log(color);
-const {firstName:namez='Muhammed', lastName, animal:{cat}} = persons
+
+const {firstName:namez='Muhammed', lastName, ...resteds /*lastName, animal:{cat, ...rested}*/} = persons
 console.log(namez);
+console.log(resteds);
 
 //ARRAY Destructuring
 const introduction = ['Hello', 'i', 'am', 'Sarah', 'Checked']
