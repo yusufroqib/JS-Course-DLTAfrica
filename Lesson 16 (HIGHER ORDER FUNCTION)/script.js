@@ -25,7 +25,7 @@ const companies= [
    {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
  ];
  
-
+//Companies that lasted for at least 10 years
 const filteredRetail = companies.filter((company) => (company.end - company.start) >= 10)
 console.log(filteredRetail);
 
