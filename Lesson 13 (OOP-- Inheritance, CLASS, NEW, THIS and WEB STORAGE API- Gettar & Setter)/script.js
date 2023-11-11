@@ -279,16 +279,31 @@ console.log(forRocco);
 
 
 // ******************STATIC KEYWORD******************
-//It belongs to the class, not the objecta
+//It belongs to the class, not the objects
+
+// class Cars {
+//     numberOfCArs = 0;
+
+//     constructor(model) {
+//         this.model = model
+//         this.numberOfCArs += 1
+//     }
+
+//     static startRace() {
+//         console.log('3...2...1...GO!')
+//     }
+// }
+
 class Cars {
-    numberOfCArs = 0;
+    static numberOfCars = 0;
+
     constructor(model) {
-        this.model = model
-        this.numberOfCArs += 1
+        this.carModel = model
+        Cars.numberOfCars += 1
     }
 
     static startRace() {
-        console.log('3...2...1...GO!')
+        console.log('3...2...1...Go!');
     }
 }
 
@@ -296,14 +311,37 @@ const car1 = new Cars("Toyota")
 const car2 = new Cars("Volvo")
 const car3 = new Cars("Benz")
 
-console.log(car1.numberOfCArs);
-console.log(car2.numberOfCArs);
-console.log(car3.numberOfCArs);
-
+console.log(car3);
+console.log(Cars.numberOfCars);
 Cars.startRace()
 
 
+// console.log(car1.numberOfCArs);
+// console.log(car2.numberOfCArs);
+// console.log(car3.numberOfCArs);
+
+// Cars.startRace()
+
+
 //*********************INHERITANCE**************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Animal {
     alive = true;
 
