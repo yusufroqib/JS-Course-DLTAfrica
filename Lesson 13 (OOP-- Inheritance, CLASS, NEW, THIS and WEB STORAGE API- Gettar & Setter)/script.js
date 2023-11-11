@@ -324,26 +324,10 @@ Cars.startRace()
 
 
 //*********************INHERITANCE**************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Animal {
     alive = true;
+
+    isbeautiful = `This is beautiful`
 
     eat() {
         console.log(`This ${this.name} can eat`);
@@ -356,55 +340,113 @@ class Animal {
 }
 
 
-//extends KEYWORD
-class Rabbit extends Animal {       //RABBIT
+
+class Rabbit extends Animal{
     name = 'rabbit'
-
-   run() {
+  
+    run() {
         console.log(`This ${this.name} can run`);
     }
 }
 
 
-class Fish extends Animal {         //FISH
+class Fish extends Animal{
     name = 'fish'
-
-   run() {
-        console.log(`This ${this.name} can run`);
-    }
-}
-
-
-class Goat extends Animal {         //GOAT
-    name = 'goat'
 
     swim() {
         console.log(`This ${this.name} can swim`);
     }
-   
+}
+
+
+class Goat extends Animal{
+    name = 'Ewure'
 
     jump() {
         console.log(`This ${this.name} can jump`);
     }
 }
 
-const rabbit = new Rabbit();        //If 'static' is not used for the methods. We use it this way
+const goat = new Goat
+const rabbit = new Rabbit
+
+console.log(goat);
+console.log(goat.name);
+goat.jump()
+goat.eat()
+goat.sleep()
+
 console.log(rabbit);
+console.log(rabbit.name);
+rabbit.eat()
 
-const fish = new Fish()
-const goat = new Goat()
 
-console.log(rabbit.alive);
-rabbit.eat();
-rabbit.sleep();
-rabbit.run();
 
-fish.eat();
-fish.sleep();
 
-goat.sleep();
-goat.jump();
-goat.swim
+
+// class Animal {
+//     alive = true;
+
+//     eat() {
+//         console.log(`This ${this.name} can eat`);
+//     }
+
+//     sleep() {
+//         console.log(`This ${this.name} can sleep`);
+//     }
+
+// }
+
+
+// //extends KEYWORD
+// class Rabbit extends Animal {       //RABBIT
+//     name = 'rabbit'
+
+//    run() {
+//         console.log(`This ${this.name} can run`);
+//     }
+// }
+
+
+// class Fish extends Animal {         //FISH
+//     name = 'fish'
+
+//    run() {
+//         console.log(`This ${this.name} can run`);
+//     }
+// }
+
+
+// class Goat extends Animal {         //GOAT
+//     name = 'goat'
+
+//     swim() {
+//         console.log(`This ${this.name} can swim`);
+//     }
+   
+
+//     jump() {
+//         console.log(`This ${this.name} can jump`);
+//     }
+// }
+
+// const rabbit = new Rabbit();        //If 'static' is not used for the methods. We use it this way
+// console.log(rabbit);
+
+// const fish = new Fish()
+// const goat = new Goat()
+
+// console.log(rabbit.alive);
+// rabbit.eat();
+// rabbit.sleep();
+// rabbit.run();
+
+// fish.eat();
+// fish.sleep();
+
+// goat.sleep();
+// goat.jump();
+// goat.swim
 
 
 //******* Getter and Setter ********
