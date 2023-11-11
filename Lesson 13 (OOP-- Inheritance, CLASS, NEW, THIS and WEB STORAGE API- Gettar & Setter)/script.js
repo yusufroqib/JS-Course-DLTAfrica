@@ -1,44 +1,44 @@
-// ******** REVISION
-const obj = {
-    firstName: 'Roqib',
-    lastName: 'Yusuf',
-    hobbies: {
-        hobby1: 'Eating',
-        hobby2: 'Cooking',
-        hobby3: 'Gaming',
-        hobby4: 'Coding',
-        hobby5: 'Dancing'
-    }
-}
+// // ******** REVISION
+// const obj = {
+//     firstName: 'Roqib',
+//     lastName: 'Yusuf',
+//     hobbies: {
+//         hobby1: 'Eating',
+//         hobby2: 'Cooking',
+//         hobby3: 'Gaming',
+//         hobby4: 'Coding',
+//         hobby5: 'Dancing'
+//     }
+// }
 
-console.log(obj);
-console.log(obj.hobbies);
-console.log(obj['hobbies']);
-console.log(Object.keys(obj));
-console.log(Object.values(obj));
-console.log(Object.entries(obj));
+// console.log(obj);
+// console.log(obj.hobbies);
+// console.log(obj['hobbies']);
+// console.log(Object.keys(obj));
+// console.log(Object.values(obj));
+// console.log(Object.entries(obj));
 
 
 
 
 //*********************************************************** NEW KEYWORD **************************************************************
-const arr2 = [1, 2, 3]
-console.log(arr2);
+// const arr2 = [1, 2, 3]
+// console.log(arr2);
 
-const arr3 = new Array(1, 2, 3)
+const arr3 = new Array(3, 6, 7)
 console.log(arr3);
 
-const state = {};                   //Method1
+// const state = {};                   //Method1
 const state1 = new Object();        //Method2
-
+console.log(state1);
 // const test = new Object()
 // const test2 = new Array()
 
 // console.log(test);
 // console.log(test2);
 
-state.bestState = 'Lagos'
-console.log(state);
+// state.bestState = 'Lagos'
+// console.log(state);
 state1.beststate = 'Abuja'
 console.log(state1);
 
@@ -52,6 +52,7 @@ console.log(myDate.getFullYear()); //Get the year
 
 
 // ********************************************************* this KEYWORD ************************************************************
+//It reference to a particular object. The object depends on the immediate context
 function sentence(words) {
     this.words = words;
     console.log(this);
@@ -66,11 +67,13 @@ function car(color, brand, wheels) {
     this.brand = brand;
     this.wheels = wheels
 
-    console.log(this);
+    // console.log(this);
 }
 
 const blueCar = new car('blue', 'BMW', 4 );
+console.log(blueCar);
 const redCar = new car('red', 'Ferrari', 4 );
+console.log(redCar);
 
 
 // *********************** CLASSWORK
@@ -105,7 +108,49 @@ minMax(inputArr)
 
 
 //************************************************************** CLASS KEYWORD ************************************************************
+//A class is a blueprint for creating objects
+    //-Within a class, we can define what properties and methods they have.
+    //-Use a constructor for unique properties
+
 // EXAMPLE
+
+class Players {
+    score = 0
+    pause() {
+        console.log("You paused the game");
+    }
+    exit() {
+        console.log("You exited the game");
+    }
+}
+
+const player11 = new Players()
+console.log(player11);
+
+player11.score++
+console.log(player11.score);
+
+player11.pause()
+player11.exit()
+
+
+
+class Footballer {
+    constructor(name, age, team, jerseyNo) {
+        this.name = name;
+        this.age = age;
+        this.team = team;
+        this.jerseyNo = jerseyNo;
+    }
+}
+
+const mbappe = new Footballer('Mbappe', 24, 'PSG', 7)
+console.log(mbappe);
+
+
+
+
+
 class Person {
     constructor(name, age, isWorking) {
         this.name = name;
@@ -177,7 +222,7 @@ console.log(user);
 console.log(user1);
 console.log(user2);
 console.log(user3);
-
+console.log([user, user1, user2, user3]);
 
 //************* USING ARROW FUNCTION 
 const createPerson = (name, age, isActive) => {
@@ -213,7 +258,28 @@ console.log(user7);
 console.log(user8);
 
 
+
+const newObj = (name, age) => {
+    const createdObj = {
+        name: name,
+        age: age
+    }
+
+    return createdObj
+}
+
+const returnedObj = newObj("Ola", 50)
+const forRocco = newObj("Roqib", 60)
+
+console.log(returnedObj);
+console.log(forRocco);
+
+
+
+
+
 // ******************STATIC KEYWORD******************
+//It belongs to the class, not the objecta
 class Cars {
     numberOfCArs = 0;
     constructor(model) {
